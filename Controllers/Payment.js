@@ -28,8 +28,8 @@ exports.paymentGateway = async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       line_items: lineItems,
       mode: "payment",
-      success_url: "http://localhost:5173/order",
-      cancel_url: "http://localhost:5173/cart",
+      success_url: "https://cara-ecomerce-amber.vercel.app/order",
+      cancel_url: "https://cara-ecomerce-amber.vercel.app/cart",
       shipping_address_collection: {
         allowed_countries: ["US", "CA", "GB", "AU", "FR", "DE"],
       },
