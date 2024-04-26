@@ -17,7 +17,7 @@ exports.paymentGateway = async (req, res) => {
           currency: "USD", //
           product_data: {
             name: product.name,
-            images: [product.img],
+            // images: [product.img],
           },
           unit_amount: Math.round(price * 100),
         },
