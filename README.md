@@ -56,8 +56,8 @@
 <h3>Steps</h3>
 <ol>
     <li>Clone the repository:
-        <pre><code>git clone https://github.com/yourusername/cara-ecommerce-backend.git</code></pre>
-        <pre><code>cd cara-ecommerce-backend</code></pre>
+        <pre><code>git clonehttps://github.com/Faizanshaikh26/CaraBackend.git</code></pre>
+        <pre><code>cd Backedn</code></pre>
     </li>
     <li>Install dependencies:
         <pre><code>npm install</code></pre>
@@ -78,7 +78,7 @@ BREVO_API_KEY=your-brevo-api-key
 <h2 id="usage">Usage</h2>
 <p>Run the backend server locally with:</p>
 <pre><code>npm start</code></pre>
-<p>By default, the server will run on <code>http://localhost:5000</code>. You can modify the port in the <code>.env</code> file.</p>
+<p>By default, the server will run on <code>http://localhost:3000</code>. You can modify the port in the <code>.env</code> file.</p>
 
 <h2 id="api-endpoints">API Endpoints</h2>
 <p>Below is a summary of the main API endpoints:</p>
