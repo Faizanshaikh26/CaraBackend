@@ -57,7 +57,7 @@
 <ol>
     <li>Clone the repository:
         <pre><code>git clonehttps://github.com/Faizanshaikh26/CaraBackend.git</code></pre>
-        <pre><code>cd Backedn</code></pre>
+        <pre><code>cd Backend</code></pre>
     </li>
     <li>Install dependencies:
         <pre><code>npm install</code></pre>
