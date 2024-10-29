@@ -1,6 +1,6 @@
 <h1>Cara E-commerce Backend</h1>
 
-<p>This repository contains the backend code for the <strong>Cara E-commerce</strong> platform. It manages user authentication, product management, secure payment processing, and handles requests made by the frontend.</p>
+<p>This repository contains the backend code for the <strong>Cara E-commerce</strong> platform. It manages user authentication, secure payment processing, and handles requests made by the frontend.</p>
 
 <h2>Table of Contents</h2>
 <ul>
@@ -17,12 +17,11 @@
 </ul>
 
 <h2 id="about-the-project">About the Project</h2>
-<p>The <strong>Cara E-commerce Backend</strong> is designed to provide robust APIs for handling functionalities like user authentication, product management, payment processing with Stripe, and sending email notifications. The backend is built with Node.js and Express, and it uses MongoDB for data storage.</p>
+<p>The <strong>Cara E-commerce Backend</strong> is designed to provide robust APIs for handling functionalities like user authentication, payment processing with Stripe, and sending email notifications. The backend is built with Node.js and Express, and it uses MongoDB for data storage.</p>
 
 <h2 id="features">Features</h2>
 <ul>
     <li><strong>User Authentication:</strong> Secure login, registration, and password hashing with <code>bcryptjs</code>.</li>
-    <li><strong>Product Management:</strong> Add, edit, and delete products with support for image uploads using <code>multer</code>.</li>
     <li><strong>Payment Processing:</strong> Stripe integration for secure payment transactions.</li>
     <li><strong>Email Notifications:</strong> Automatic email notifications with <code>nodemailer</code>.</li>
     <li><strong>Data Security:</strong> Secure data transfer using JWT for authorization.</li>
@@ -90,14 +89,6 @@ EMAIL_PASS=your_email_password
     <li><code>POST /api/auth/register</code>: Register a new user</li>
     <li><code>POST /api/auth/login</code>: User login</li>
     <li><code>POST /api/auth/reset-password</code>: Request a password reset</li>
-</ul>
-
-<h3>Product Routes</h3>
-<ul>
-    <li><code>GET /api/products</code>: Get a list of all products</li>
-    <li><code>POST /api/products</code>: Add a new product (Admin only)</li>
-    <li><code>PUT /api/products/:id</code>: Update product details (Admin only)</li>
-    <li><code>DELETE /api/products/:id</code>: Delete a product (Admin only)</li>
 </ul>
 
 <h3>Order and Payment Routes</h3>
