@@ -1,6 +1,6 @@
 <h1>Cara E-commerce Backend</h1>
 
-<p>This repository contains the backend code for the <strong>Cara E-commerce</strong> platform. It manages user authentication, secure payment processing, and handles requests made by the frontend.</p>
+<p>This repository contains the backend code for the <strong>Cara E-commerce</strong> platform. It provides APIs for managing products, handling user authentication, processing payments, and more.</p>
 
 <h2>Table of Contents</h2>
 <ul>
@@ -17,15 +17,14 @@
 </ul>
 
 <h2 id="about-the-project">About the Project</h2>
-<p>The <strong>Cara E-commerce Backend</strong> is designed to provide robust APIs for handling functionalities like user authentication, payment processing with Stripe, and sending email notifications. The backend is built with Node.js and Express, and it uses MongoDB for data storage.</p>
+<p>The <strong>Cara E-commerce Backend</strong> is designed to provide robust APIs for functionalities such as user authentication, product management, payment processing with Stripe, and contact form submissions. The backend is built with Node.js and Express, and it uses MongoDB for data storage.</p>
 
 <h2 id="features">Features</h2>
 <ul>
-    <li><strong>User Authentication:</strong> Secure login, registration, and password hashing with <code>bcryptjs</code>.</li>
+    <li><strong>User Authentication:</strong> Secure login, registration, and password reset.</li>
+    <li><strong>Product Management:</strong> Create, read, update, and delete products.</li>
     <li><strong>Payment Processing:</strong> Stripe integration for secure payment transactions.</li>
-    <li><strong>Email Notifications:</strong> Automatic email notifications with <code>nodemailer</code>.</li>
-    <li><strong>Data Security:</strong> Secure data transfer using JWT for authorization.</li>
-    <li><strong>CORS Support:</strong> Cross-Origin Resource Sharing (CORS) to allow frontend requests.</li>
+    <li><strong>Contact Form:</strong> API endpoint for user contact form submissions.</li>
 </ul>
 
 <h2 id="tech-stack-and-dependencies">Tech Stack and Dependencies</h2>
@@ -68,12 +67,12 @@
 <h2 id="environment-variables">Environment Variables</h2>
 <p>Create a <code>.env</code> file in the root directory to configure your environment variables:</p>
 
-<pre><code>PORT=5000
+<pre><code>PORT=3000
 MONGO_URI=your_mongo_db_connection_string
 JWT_SECRET=your_jwt_secret
-STRIPE_SECRET_KEY=your_stripe_secret_key
-EMAIL_USER=your_email@example.com
-EMAIL_PASS=your_email_password
+STRIPE_KEY==your_stripe_secret_key
+BREVO_API_KEY=your-brevo-api-key
+
 </code></pre>
 
 <h2 id="usage">Usage</h2>
@@ -84,22 +83,35 @@ EMAIL_PASS=your_email_password
 <h2 id="api-endpoints">API Endpoints</h2>
 <p>Below is a summary of the main API endpoints:</p>
 
-<h3>Auth Routes</h3>
+<h3>Product Routes</h3>
 <ul>
-    <li><code>POST /api/auth/register</code>: Register a new user</li>
-    <li><code>POST /api/auth/login</code>: User login</li>
-    <li><code>POST /api/auth/reset-password</code>: Request a password reset</li>
+    <li><code>POST /addProduct</code>: Add a new product</li>
+    <li><code>GET /allProduct</code>: Retrieve all products</li>
+    <li><code>DELETE /delete/:id</code>: Remove a product by ID</li>
+    <li><code>PUT /update/:id</code>: Update product details by ID</li>
 </ul>
 
-<h3>Order and Payment Routes</h3>
+<h3>User Authentication Routes</h3>
 <ul>
-    <li><code>POST /api/orders</code>: Place an order</li>
-    <li><code>POST /api/payment</code>: Handle Stripe payment</li>
+    <li><code>POST /signup</code>: Register a new user</li>
+    <li><code>POST /login</code>: User login</li>
+    <li><code>POST /forgot-password</code>: Request a password reset</li>
+    <li><code>POST /reset-password/:token</code>: Reset password using token</li>
 </ul>
 
-<h3>Miscellaneous Routes</h3>
+<h3>Contact Form Route</h3>
 <ul>
-    <li><code>POST /api/contact</code>: Contact form submission</li>
+    <li><code>POST /Contactform</code>: Submit a contact form</li>
+</ul>
+
+<h3>Payment Route</h3>
+<ul>
+    <li><code>POST /create-checkout-session</code>: Create a Stripe checkout session for payments</li>
+</ul>
+
+<h3>User Address Route</h3>
+<ul>
+    <li><code>POST /user-Address</code>: Add or update the user's address</li>
 </ul>
 
 <h2 id="contributing">Contributing</h2>
@@ -118,5 +130,5 @@ EMAIL_PASS=your_email_password
 <h2 id="contact">Contact</h2>
 <p>For questions or feedback, contact the maintainers:</p>
 <ul>
-    <li><strong>Your Name</strong> - <a href="https://github.com/yourusername">@yourusername</a> - youremail@example.com</li>
+    <li><strong>Faizan</strong> - <a href="https://github.com/Faizanshaikh26/CaraBackend.git">@Faizanshaikh26</a> - faizansheikh8209.com</li>
 </ul>
